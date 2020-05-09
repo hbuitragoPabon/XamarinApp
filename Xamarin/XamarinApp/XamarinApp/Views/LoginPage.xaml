@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinApp.Views.LoginPage">
+
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid BackgroundColor="{StaticResource azul_color}" Grid.Row="0"/>
+        <Grid BackgroundColor="{StaticResource gris_claro_color}" Grid.Row="1"/>
+
+        <!--icono-->
+        <Grid Grid.RowSpan="2" Margin="30,0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout Grid.Row="0"  WidthRequest="150" HeightRequest="150" HorizontalOptions="Center" VerticalOptions="Center">
+
+                <BoxView BackgroundColor="{StaticResource gris_claro_color}" 
+                         VerticalOptions="Fill" 
+                         WidthRequest="150" 
+                         CornerRadius="75" 
+                         HeightRequest="150">
+
+                </BoxView>
+            </StackLayout>
+
+            <Image Grid.Row="0" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" 
+                   Source="home" WidthRequest="70">
+                
+            </Image>
+            
+            <Grid Grid.Row="1">
+            <Frame HasShadow="True">
+                <StackLayout Spacing="30">
+                    <Label Text="Login" HorizontalOptions="Center"/>
+                    <Entry x:Name="txtEmail" Placeholder="Email" Keyboard="Email"/>
+                    <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True"/>
+
+                    <Button
+                        x:Name="btn_login"
+                        Clicked="btn_login_Clicked"
+                        Text="Login" BackgroundColor="{StaticResource azul_color}" HeightRequest="60"
+                            TextColor="{StaticResource gris_claro_color}" CornerRadius="25"/>
+
+                </StackLayout>
+            </Frame>
+            </Grid>
+            <Grid Grid.Row="2"></Grid>
+        </Grid>
+
+        
+
+    
+    </Grid>
+
+</ContentPage>

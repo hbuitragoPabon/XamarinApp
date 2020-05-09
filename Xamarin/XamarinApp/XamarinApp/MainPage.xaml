@@ -6,6 +6,48 @@
              mc:Ignorable="d"
              x:Class="XamarinApp.MainPage">
 
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="fondo2.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#3b83bd" Opacity="0.8"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="logo.png" WidthRequest="100" HeightRequest="100" Margin="0,50,0,30"/>
+                <!--<Image Source="logo.png" Grid.Row="0" Grid.Column="0"/>-->
+                
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry Placeholder="Correo electronico" PlaceholderColor="White"/>
+                    <Entry Placeholder="COntraseña" PlaceholderColor="White" IsPassword="True"/>
+                    <Button Text="Iniciar sesion" BackgroundColor="White" TextColor="Black"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Recuperar contraseña?" TextColor="White" FontAttributes="Bold"/>
+                        <Label Text="Registrarse" HorizontalOptions="EndAndExpand" FontAttributes="Bold" TextColor="White"/>
+
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,50">
+                    <Label Text="Iniciar sesion con" HorizontalOptions="Center" TextColor="White"/>
+                    <StackLayout Orientation="Horizontal" >
+                        <!--<Image Grid.Row="0" Source="logo.png" WidthRequest="45" HeightRequest="45"/>
+                        <Image Grid.Row="0" Source="logo.png" WidthRequest="45" HeightRequest="45"/>
+                        <Image Grid.Row="0" Source="logo.png" WidthRequest="45" HeightRequest="45"/>-->
+                    </StackLayout>
+                </StackLayout>
+
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content> 
+    
     <!--<StackLayout>
         --><!-- Place new controls here --><!--
         <Label Text="Welcome to Xamarin.Forms!" 
@@ -14,7 +56,7 @@
     </StackLayout>-->
 
 
-    <ScrollView>
+    <!--<ScrollView>
         <Grid >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
@@ -38,6 +80,6 @@
 
         </Grid>
         
-    </ScrollView>
+    </ScrollView>-->
 
 </ContentPage>
