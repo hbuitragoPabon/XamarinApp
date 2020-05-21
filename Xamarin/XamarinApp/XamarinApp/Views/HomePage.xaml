@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
             xmlns:views="clr-namespace:XamarinApp.Views"
+            Title="Restaurantes"
              x:Class="XamarinApp.Views.HomePage">
   <!--Pages can be added as references or inline-->
 

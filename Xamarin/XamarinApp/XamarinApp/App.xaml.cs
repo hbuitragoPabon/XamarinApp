@@ -26,5 +26,7 @@ namespace XamarinApp
         protected override void OnResume()
         {
         }
+
+       
     }
 }

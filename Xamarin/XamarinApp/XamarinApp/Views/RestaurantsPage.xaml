@@ -9,13 +9,17 @@
 
 
     <Grid>
-        <ListView ItemsSource="{Binding Restaurantes}" HasUnevenRows="True" CachingStrategy="RecycleElement">
+        
+        <ListView x:Name="grd_restaurants" 
+                  ItemSelected="grd_restaurants_ItemSelected"
+                  ItemsSource="{Binding Restaurantes}" HasUnevenRows="True" CachingStrategy="RecycleElement" SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame HasShadow="False" BorderColor="LightGray" Margin="5" Padding="0">
-                            <StackLayout Orientation="Horizontal">
-                                <Image Source="{Binding Imagen}" HeightRequest="100" WidthRequest="100"/>
+                        <Grid BackgroundColor="{StaticResource gris_claro_color}">
+                        <Frame HasShadow="True" BorderColor="LightGray" Margin="5" Padding="0">
+                            <StackLayout Orientation="Horizontal" Padding="5,5,5,5" >
+                                <Image Source="{Binding Imagen}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill"/>
                                 <StackLayout>
                                     <Label Text="{Binding Nombre}" FontSize="Medium" />
                                     <Label Text="{Binding Direccion}" FontSize="Micro" TextColor="Gray"/>
@@ -23,17 +27,13 @@
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            
-            
         </ListView>
-        
-        
-        
     </Grid>
-    
+   
     
     
     

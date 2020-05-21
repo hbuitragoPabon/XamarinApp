@@ -26,6 +26,20 @@ namespace XamarinApp.Repositories
             return null;
         }
 
+        async public Task<List<ProductModel>> GetProducts(Guid restaurantId)
+        {
+            using (var client = new HttpClient())
+            {
+                var response = await client.GetAsync(new
+                    Uri($"https://cedesistemas-app-api.azurewebsites.net/api/Restaurantes/{restaurantId}/Productos"));
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<ProductModel>>(content);
+                }
+            }
+            return null;
+        }
 
 
     }

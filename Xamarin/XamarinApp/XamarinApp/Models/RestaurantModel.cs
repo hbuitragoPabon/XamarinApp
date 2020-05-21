@@ -20,8 +20,8 @@ namespace XamarinApp.Models
 
         public double Latitud { get; set; }
 
-        public double Longitud { get; set; }
+        public double Longitud { get; set; }        
 
-        public object Productos { get; set; }
+        public int Calificacion { get; set; }
     }
 }

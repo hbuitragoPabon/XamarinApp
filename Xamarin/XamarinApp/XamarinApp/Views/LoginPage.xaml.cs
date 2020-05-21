@@ -29,8 +29,9 @@ namespace XamarinApp.Views
 
             if(email == "admin@admin.com" && password == "admin")
             {
+                App.Current.MainPage = new NavigationPage(new HomePage());
                 //correcta
-                await this.Navigation.PushModalAsync(new HomePage());
+                //await this.Navigation.PushModalAsync(new HomePage());
             }
             else
             {
