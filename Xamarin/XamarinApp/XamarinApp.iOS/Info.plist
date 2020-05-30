@@ -34,5 +34,14 @@
     <string>XamarinApp</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+	
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Podemos usar tu ubicación todo el tiempo?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Podemos usar tu ubicación cuando la aplicación este siendo usada?</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Podemos usar tu ubicación siempre?</string>
+	
+	
 </dict>
 </plist>

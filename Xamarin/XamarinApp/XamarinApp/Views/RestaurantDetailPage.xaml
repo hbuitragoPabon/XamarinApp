@@ -26,15 +26,23 @@
 
                     <StackLayout Grid.Row="1" VerticalOptions="End" Spacing="2" Margin="5,15">
                         <Label Text="{Binding Item.Nombre}" FontAttributes="Bold" TextColor="White" FontSize="Title"></Label>
-                        <Label Text="{Binding Item.Direccion}" TextColor="White" FontSize="Subtitle"></Label>
+                        <Button x:Name="btn_Map" BackgroundColor="Transparent" Clicked="btn_Map_Clicked" Text="{Binding Item.Direccion}" TextColor="White" FontSize="Subtitle"></Button>
 
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" FontAttributes="Bold" Text="{Binding Item.Telefono}" TextColor="White" FontSize="Subtitle"></Label>
-                            <Label Grid.Column="1" FontAttributes="Bold" HorizontalTextAlignment="End" Text="{Binding Item.SitioWeb}" LineBreakMode="TailTruncation" TextColor="White" FontSize="Subtitle"></Label>
+                            <Button BackgroundColor="Red" ImageSource="phone" Grid.Column="0" 
+                                    Command="{Binding OpenPhoneCommand}"  
+                                    FontAttributes="Bold" Text="{Binding Item.Telefono}" TextColor="White" FontSize="Subtitle"></Button>
+                            <Button 
+                                Command="{Binding OpenUrlCommand}"                                    
+                                HorizontalOptions="End"
+                                    BackgroundColor="White"                                    
+                                Grid.Column="1" FontAttributes="Bold" 
+                                     Text="Visitar Web" 
+                                    TextColor="Gray" FontSize="Subtitle"></Button>
                         </Grid>
                     </StackLayout>
                 </Grid>

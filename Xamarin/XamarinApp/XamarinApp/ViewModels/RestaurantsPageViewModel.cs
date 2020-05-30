@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
+using XamarinApp.Interfaces;
 using XamarinApp.Models;
 using XamarinApp.Repositories;
 
@@ -22,10 +23,7 @@ namespace XamarinApp.ViewModels
 
         
         public ObservableCollection<RestaurantModel> Restaurantes { get; set; }
-
         
-
-
         public RestaurantsPageViewModel()
         {
             Restaurantes = new ObservableCollection<RestaurantModel>();
@@ -34,12 +32,16 @@ namespace XamarinApp.ViewModels
 
         async private void LoadRestaurants()
         {
-            IsRefresing = true;
-            foreach (var item in await new RestaurantRepository().GetRestaurants())
-            {
-                Restaurantes.Add(item);
-            }
-            IsRefresing = false;
+          
+                IsRefresing = true;
+                foreach (var item in await new RestaurantRepository().GetRestaurants())
+                {
+                    Restaurantes.Add(item);
+                }
+                IsRefresing = false;
+            
+            
+            
 
         }
 
