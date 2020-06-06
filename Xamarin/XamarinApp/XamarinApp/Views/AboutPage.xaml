@@ -6,10 +6,30 @@
              mc:Ignorable="d"
              x:Class="XamarinApp.Views.AboutPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20">
+            <Grid HorizontalOptions="Center" WidthRequest="200">
+                <Image x:Name="imagen" Source="restaurant" WidthRequest="200" HeightRequest="200"></Image>
+
+                <Grid VerticalOptions="End" HorizontalOptions="Start" Padding="5">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="camera" Tapped="camera_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Image Source="camera" WidthRequest="30" HeightRequest="30"></Image>
+                </Grid>
+                <Grid VerticalOptions="End" HorizontalOptions="End" Padding="5">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="photo" Tapped="photo_Tapped"/>
+                    </Grid.GestureRecognizers>
+                    <Image Source="photo" WidthRequest="30" HeightRequest="30"></Image>
+                </Grid>
+            </Grid>
+
+            <Label Text="Hector Buitrago" HorizontalOptions="Center" FontSize="20" Padding="20"/>
+            <Button BackgroundColor="Transparent" Text="https://www.facebook.com/hector.buitrago"/>
+            <Button BackgroundColor="Transparent" Text="hector.buitraguito@gmail.com"/>
+            <Button BackgroundColor="Transparent" Text="+573205351092"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
